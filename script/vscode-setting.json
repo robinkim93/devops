@@ -1,0 +1,57 @@
+{
+    "window.commandCenter": true,
+    "workbench.iconTheme": "Monokai Pro Icons",
+    "workbench.colorTheme": "Monokai Pro",
+    "redhat.telemetry.enabled": true,
+    "workbench.editor.enablePreview": false,
+    // YAML 기본 설정
+  "yaml.schemas": {
+    "https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.28.0-standalone-strict/all.json": [
+        "**/kubernetes/**/*.yaml",
+        "**/k8s/**/*.yaml",
+        "**/*k8s*.yaml",
+        "**/*kubernetes*.yaml"
+      ],
+      "kubernetes": [
+        "*.yaml",
+        "*.yml"
+      ]
+  },
+  
+  // YAML 편집기 설정
+  "yaml.format.enable": true,
+  "yaml.validate": true,
+  "yaml.hover": true,
+  "yaml.completion": true,
+  
+  // Kubernetes 설정
+  "vs-kubernetes": {
+    "vs-kubernetes.namespace": "default",
+    "vscode-kubernetes.helm-path-mac": "/Users/kimtaeksoo/.vs-kubernetes/tools/helm/darwin-arm64/helm"
+},
+  
+  // 파일 연결 설정
+  "files.associations": {
+    "*.yaml": "yaml",
+    "*.yml": "yaml"
+  },
+  // Kubernetes API 버전에 맞게 조정
+  "yaml.customTags": [
+    "!And scalar",
+    "!If scalar",
+    "!Not scalar",
+    "!Equals scalar",
+    "!Or scalar",
+    "!FindInMap sequence",
+    "!Base64 scalar",
+    "!Cidr scalar",
+    "!Ref scalar",
+    "!Sub scalar",
+    "!GetAtt scalar",
+    "!GetAZs scalar",
+    "!ImportValue scalar",
+    "!Select sequence",
+    "!Split sequence",
+    "!Join sequence"
+  ]
+}

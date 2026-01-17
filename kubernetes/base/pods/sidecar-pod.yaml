@@ -1,0 +1,6 @@
+appVersion: v1
+kind: Pod
+metadata:
+  name: sidecar-pod
+  labels:
+    app: sidecar-demo
