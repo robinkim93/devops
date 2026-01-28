@@ -1,0 +1,7 @@
+rootProject.name = 'payment-simulation-platform'
+
+include 'auth-module'
+include 'payment-module'
+include 'point-module'
+include 'coupon-module'
+include 'app'
