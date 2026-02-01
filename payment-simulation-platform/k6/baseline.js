@@ -11,5 +11,19 @@ export const options = {
 };
 
 export default function () {
-    http.post('http://localhost:8080/api/auth/login', {body: JSON.stringify({email: 'test@test.com', password: 'testtest'})}, {headers: {'Content-Type': 'application/json'}});
+    const payload = JSON.stringify({
+        email: 'test@test.com', 
+        password: 'testtest'
+    });
+    
+    const params = {
+        headers: {'Content-Type': 'application/json'}
+    };
+    
+    const res = http.post('http://localhost:30081/api/auth/login', payload, params);
+    
+    // 디버깅용 로그
+    if (res.status !== 200) {
+        console.log(`Status: ${res.status}, Body: ${res.body}`);
+    }
 }

@@ -3,7 +3,7 @@ import Login from './components/Login'
 import Dashboard from './components/Dashboard'
 import './App.css'
 
-const API_BASE_URL = 'http://localhost:8080'
+const API_BASE_URL = 'http://localhost:30081'
 
 function App() {
   const [user, setUser] = useState(null)

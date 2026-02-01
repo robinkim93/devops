@@ -1,0 +1,4 @@
+FROM mysql:8.0
+
+ENV MYSQL_CHARSET=utf8mb4
+ENV MYSQL_COLLATION=utf8mb4_unicode_ci

@@ -8,3 +8,7 @@ dependencies {
     // Spring Data JPA는 app 모듈에서도 필요 (EnableJpaRepositories 사용)
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 }
+
+bootJar {
+    archiveFileName = 'app.jar'
+}

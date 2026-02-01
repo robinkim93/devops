@@ -1,0 +1,19 @@
+cd "$(dirname "$0")/.."
+
+DOCKER_USER=robinkim3
+
+# mysql 이미지 빌드
+docker build -t $DOCKER_USER/payment-mysql ./docker/mysql
+docker push $DOCKER_USER/payment-mysql
+
+# redis 이미지 빌드
+docker build -t $DOCKER_USER/payment-redis ./docker/redis
+docker push $DOCKER_USER/payment-redis
+
+# backend 이미지 빌드
+docker build -t $DOCKER_USER/payment-backend -f ./docker/backend/Dockerfile .
+docker push $DOCKER_USER/payment-backend
+
+# frontend 이미지 빌드
+docker build -t $DOCKER_USER/payment-frontend -f ./docker/frontend/Dockerfile .
+docker push $DOCKER_USER/payment-frontend

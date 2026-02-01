@@ -1,0 +1,8 @@
+# Backend 빌드
+cd ../backend
+./gradlew :app:bootJar
+
+# Frontend 빌드
+cd ../frontend
+npm install
+npm run build

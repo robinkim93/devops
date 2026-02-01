@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: backend
+  namespace: payment-simulation-platform
+  labels:
+    app: backend
+spec:
+  containers:
+    - name: backend
+      image: robinkim3/payment-backend
+      ports:
+        - containerPort: 8080
+      env:
+        - name: SPRING_DATASOURCE_URL
+          value: "jdbc:mysql://mysql-service:3306/payment_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true"
+        - name: SPRING_DATA_REDIS_HOST
+          value: "redis-service"

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: frontend
+  namespace: payment-simulation-platform
+  labels:
+    app: frontend
+spec:
+  containers:
+    - name: frontend
+      image: robinkim3/payment-frontend
+      imagePullPolicy: Always
+      ports:
+        - containerPort: 80
+        
